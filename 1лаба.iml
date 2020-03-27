@@ -1,0 +1,107 @@
+/*3*//*fun main(args:Array<String>) {
+var num = 123
+println(counter(num))
+println(fullStr(num))
+}
+fun counter(a:Int):Int{
+val srt = "$a cm."
+return srt.length
+}
+fun fullStr(a:Int):String{
+val str="$a cm"
+return str
+}*/
+/*4*/
+/*fun main(args:Array<String>) {
+var num = 123
+println(counter(num))
+println(fullStr(num))
+}
+fun counter(a:Int):Int{
+val srt = "$a cm."
+return srt.length
+}
+fun fullStr(a:Int):String{
+val str="$a cm"
+return str
+}*/
+/*6*/
+/*fun main(args:Array<String>) {
+var num = 123
+println(counter(num))
+}
+fun counter(a:Int) = "$a cm.".length */
+/*fun main(args: Array<String>) {
+if (args.size==0){
+println("pleas provide a name as a command-line argument")}
+else{
+println("nice")}
+}*/
+/*7*/
+/*fun main(args: Array<String>) {
+
+if (args.size==0){
+println("pleas provide a name as a command-line argument")}
+else{
+var c = args[0]+args[1]+args[2]
+println("$c")
+
+}}*/
+/*8*/
+/*fun main(args: Array<String>) {
+var a= args[0]
+var b=args[1]
+var c=args[2]
+
+println("Имя: "+"$a ,")
+println("Фамилия: "+"$b ,")
+println("Отчество: "+"$c ")
+}*/
+/*9*/
+/*fun main(args: Array<String>) {
+var a: String= args[0]
+var b: String= args[1]
+var t: Int =a.toInt()
+var r: Int =b.toInt()
+var c=r+t
+
+println("первое слогаемое: "+"$a ,")
+println("второе слогаемое: "+"$b ,")
+println("сумма: "+"$c ")
+}*/
+/*10*/
+/*
+fun main(args: Array<String>) {
+var x=0
+while (x < args.size) {
+println("Hello"+" "+ args[x] + "!")
+x++
+}
+}
+*/
+/*11*/
+/*
+fun main(args: Array<String>) {
+var factorial = 0
+for (name in args)
+factorial = factorial + name.toInt()
+println("1+2+3+4+5 равно $factorial")
+}
+*/
+/*12*/
+/*
+fun main(args: Array<String>) {
+var i=0
+for (index in args.indices) {
+i=index.toInt()
+println("item at"+" "+"$i"+" "+"is"+" "+args[i])
+}
+*/
+/*14*/
+fun main(args: Array<String>) {
+    for (index in args.indices){
+        println("item at $index is ${args[index]}")
+    }
+}
+
+
