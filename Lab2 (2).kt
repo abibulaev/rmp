@@ -1,4 +1,4 @@
-/*1*/
+//1
 fun main(args: Array<String>) {
     val language = if (args.size == 0) "EN" else args[0]
     println(when (language) {
@@ -8,7 +8,8 @@ fun main(args: Array<String>) {
         else -> "Sorry, I can't greet you in $language yet"
     })
 }
-/*2*/
+
+//2
 fun main(args: Array<String>) {
     val a1 = 3
     val a2 = 3L
@@ -27,7 +28,26 @@ fun main(args: Array<String>) {
     println(a7::class)
     println(a8::class)
 }
-/*3*/
+fun main(args: Array<String>) {
+val a = 3
+val b = 3L
+val c = 3f
+val d = 3.0
+val e = "Unknown"
+val f = "3"
+val g = "Long"
+val l = '3'
+println(a as Any is Int)
+println(b as Any is Long)
+println(c as Any is Float)
+println(d as Any is Double)
+println(e as Any is String)
+println(f as Any is String)
+println(g as Any is String)
+println(l as Any is Char)
+
+}
+//3
 fun main(args: Array<String>) {
     val a1 = 3
     val a2 = 3L
@@ -55,23 +75,16 @@ fun describe(obj: Any): String =
         !is String -> "Not a string"
         else       -> "Unknown"
 }
-/*4*/
+
+//4
 fun main(args: Array<String>) {
-    val a1 = 3
-    val a2 = 3L
-    val a3 = 3f
-    val a4 = 3.0
-    val a5 = "Unknown"
-    val a6 = "3"
-    val a7 = "Long"
-    val a8 = '3'
-    println(describe(-7))
-    println(describe(6L))
-    println(describe(5.0))
-    println(describe("wferfsdfdfsdfykul"))
+    println(describe(-5))
+    println(describe(4L))
+    println(describe(3.0))
+    println(describe("wfertykul"))
     println(describe(4))
     println(describe("Hello"))
-    println(describe(2))
+    println(describe(1))
 
 }
 
@@ -84,12 +97,11 @@ fun describe(obj: Any): String =
         else       -> "Unknown"
 }
 
-/*5*/
-class EventManager {
-    companion object FirebaseManager {
-    } }
-fun declaration(obj: Any): String
-{
+//5
+fun main(args: Array<String>) {
+	println(declaration())
+}
+fun declaration(obj: Any):String{
     var a = when (obj) {
         1          -> "One"
         "Hello"    -> "Greeting"
@@ -99,32 +111,56 @@ fun declaration(obj: Any): String
     }
     return a
 }
-/*7*/
+
+//6
+fun main(args:Array<String>){
+val x = 9
+when{
+isOdd(x)->println("x is odd")
+isEven(x)->println("x is even")
+else->println("x is funny")
+}
+}
+
+fun isOdd(x: Any){
+if(x !is Int) return false
+return x%2==1
+}
+fun isEven(x: Any){
+if (x !is Int) return false
+return x%2==0
+}
+
+//7
 fun main(args: Array<String>) {
-    val x = 10
-    val y = 9
+    val x = 10 
+    val y = 9 
+    // val x = 9  
+    // val y = 10
     if (x in 1..y+1) {
-        println("fits in range")
-    } else {
-        println("out of range")
-    } }
-fun main(args: Array<String>) {
-    val x = 10 /// out of range
-    val y = 9
-    if (x in 1..y-1) {
-        println("fits in range")
+        println("fits in range") 
     } else {
         println("out of range")
     }
 }
+fun main(args: Array<String>) {
+     val x = 9  
+     val y = 10
+    if (x in 1..y-1) {
+        println("fits in range")
+    } else {
+        println("out of range")
+      }
+}
 
-/*8*/
+//8
 fun main(args: Array<String>) {
 
     test(5)
     test(11)
     test(25)
     test(15)
+
 }
 fun test(x: Any)
 {
@@ -136,19 +172,28 @@ fun test(x: Any)
         else -> println("none of the above")
     }
 }
-/*9*/
+
+//9
 fun main(args: Array<String>) {
-    var items = arrayOf("orange","apple")
-    when {
-        "orange" in items -> println("juicy")
+var items1= arrayOf("apple")
+ when {
+        
         "apple" in items -> println("apple is fine too")
     }
+    var items = arrayOf("orange")
+    when {
+        "orange" in items -> println("juicy")
+        
+    }
 }
-/*10*/
+
+//10
 fun main(args: Array<String>) {
-    println(hasPrefix("prefixhsdajkl"))
+
+    println(hasPrefix("prefixhjkl"))
 }
+
 fun hasPrefix(x: Any) = when(x) {
-    is String -> x.startsWith("pref")
+    is String -> x.startsWith("prefix")
     else -> false
 }
